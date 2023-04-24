@@ -6,7 +6,7 @@
 
 ### Description
 
-This project is one of the iTransition's internship tasks.
+This project is one of the iTransition's internship tasks. Purpose: to learn how to create fullstack project (db+server+client)
 
 ### Features
 
