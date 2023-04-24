@@ -1,6 +1,8 @@
-## students
+## admin-panel
 
-[https://students-client1.onrender.com](https://students-client1.onrender.com)
+[Link to the deploy](https://students-client1.onrender.com)
+
+[Link to the backend repository](https://github.com/project1dmtrackdev/students-server)
 
 ### Description
 
