@@ -29,10 +29,8 @@ export const FileInput: FC = () => {
 
                 dispatch(fetchRecords());
             }
-        } catch (e) {
-            if (e instanceof AxiosError) {
-                dispatch(recordSlice.actions.fetchError(e.response?.data.text));
-            }
+        } catch (e: any) {
+            dispatch(recordSlice.actions.fetchError(e.response?.data.message));
         }
     }
 
