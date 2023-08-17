@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { MouseEventHandler } from 'react';
 
 interface Props {
     children: React.ReactNode;
-    onClick: () => void;
+    onClick: React.MouseEventHandler<HTMLButtonElement>;
     variant?: string;
     size?: string;
     disabled?: boolean;
@@ -24,8 +24,7 @@ const Button: React.FC<Props> = ({
             onClick={onClick}
             disabled={disabled}
             type={type}
-            {...rest}
-        >
+            {...rest}>
             {children}
         </button>
     );

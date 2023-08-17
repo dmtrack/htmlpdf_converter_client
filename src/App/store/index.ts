@@ -1,15 +1,14 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
-import userReducer from './slices/user.slice';
-import authReducer from './slices/auth.slice';
+import recordReducer from './slices/record.slice';
 
 const rootReducer = combineReducers({
-    users: userReducer,
-    auth: authReducer,
+    records: recordReducer,
 });
 
 export function setupStore() {
     return configureStore({
         reducer: rootReducer,
+        middleware: (getDefaultMiddleware) => getDefaultMiddleware(),
     });
 }
 
