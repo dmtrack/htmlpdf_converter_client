@@ -2,7 +2,7 @@ import { FC } from 'react';
 import { useInputHook } from './inputHook';
 import Button from '../button';
 import axios from '../../axios';
-import { useAppDispatch } from '../../hook/redux';
+import { useAppDispatch, useAppSelector } from '../../hook/redux';
 import { AxiosError } from 'axios';
 import { recordSlice } from '../../store/slices/record.slice';
 import { fetchRecords } from '../../store/actions/recordActions';
@@ -11,7 +11,7 @@ const baseURL = process.env.REACT_APP_BASE_URL;
 
 export const FileInput: FC = () => {
     const dispatch = useAppDispatch();
-
+    const { error } = useAppSelector((state) => state.records);
     const { resetSelection, handleFileDialog, inputFileRef, file, setFile } =
         useInputHook();
 
@@ -48,14 +48,10 @@ export const FileInput: FC = () => {
                 variant='info'
                 size='md'
                 onClick={uploadFile}
-                disabled={!file}>
+                disabled={!!error}>
                 upload
             </Button>
-            <Button
-                variant='danger'
-                size='md'
-                onClick={resetSelection}
-                disabled={!file}>
+            <Button variant='danger' size='md' onClick={resetSelection}>
                 reset
             </Button>
         </div>
