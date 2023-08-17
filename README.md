@@ -11,7 +11,7 @@ Technical task was to create microservice that able to get zip acrhives and conv
 
 ### Features
 
-Take a zip file and return at pdf format
+Takes a zip file and returns it at pdf format
 Records are hold at dedicated PostgreSQL cloud-db
 Converted pdf's are hold at Firebase cloud-service
 
