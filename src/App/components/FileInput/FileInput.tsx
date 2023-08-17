@@ -5,6 +5,7 @@ import axios from '../../axios';
 import { useAppDispatch } from '../../hook/redux';
 import { AxiosError } from 'axios';
 import { recordSlice } from '../../store/slices/record.slice';
+import { fetchRecords } from '../../store/actions/recordActions';
 
 const baseURL = process.env.REACT_APP_BASE_URL;
 
@@ -23,10 +24,11 @@ export const FileInput: FC = () => {
                     headers: { 'Content-Type': 'multipart/form-data' },
                 });
                 setFile(null);
+                if (inputFileRef.current?.value)
+                    inputFileRef.current.value = '';
+
+                dispatch(fetchRecords());
             }
-            // const users = await axios
-            //     .get(`${baseURL}/getusers`)
-            //     .then((data) => data);
         } catch (e) {
             if (e instanceof AxiosError) {
                 dispatch(recordSlice.actions.fetchError(e.response?.data.text));
@@ -43,11 +45,7 @@ export const FileInput: FC = () => {
                 onChange={handleFileDialog}
                 ref={inputFileRef}
             />
-            {/* <TextField
-                variant='standard'
-                value={selectedFile || 'browse a file'}
-                style={{ ...styles.textField }}
-            /> */}
+
             <Button
                 variant='info'
                 size='md'

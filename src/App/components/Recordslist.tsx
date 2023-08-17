@@ -38,7 +38,7 @@ const RecordsList = ({ recordsProps }: IRecordsListProps) => {
                                         link
                                     </th>
                                     <th scope='col' className='px-6 py-3'>
-                                        createdAt
+                                        created
                                     </th>
                                 </tr>
                             </thead>

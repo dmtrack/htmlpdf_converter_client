@@ -50,5 +50,6 @@ export const useInputHook = () => {
         selectedFile,
         file,
         setFile,
+        setSelectedFile,
     };
 };
