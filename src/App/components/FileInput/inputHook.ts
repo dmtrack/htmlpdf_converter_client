@@ -26,7 +26,7 @@ export const useInputHook = () => {
         if (!files || files?.length === 0) return;
         const file = files[0];
 
-        if (file.size > 100) {
+        if (file.size > 2048000) {
             setSelectedFile(null);
             setFile(null);
             if (inputFileRef.current?.value) inputFileRef.current.value = '';
