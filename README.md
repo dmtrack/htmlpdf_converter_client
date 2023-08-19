@@ -1,5 +1,7 @@
 ## htmlpdf_converter
 
+[deploy](https://htmlpdf-converter-client.onrender.com)
+
 [backend repository](https://github.com/dmtrack/htmlpdf_converter_server)
 
 ### Description
@@ -45,6 +47,7 @@ paste to .env file on server:
 -   Tailwind
 -   PostgreSQL
 -   FireBase
+-   Winston logger
 
 ### Preview
 

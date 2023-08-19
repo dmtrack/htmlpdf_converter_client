@@ -27,6 +27,7 @@ export const useInputHook = () => {
         const file = files[0];
 
         if (file.size > 2048000) {
+            console.error('fize size is overeached');
             setSelectedFile(null);
             setFile(null);
             if (inputFileRef.current?.value) inputFileRef.current.value = '';
