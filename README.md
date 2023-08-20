@@ -48,6 +48,7 @@ paste to .env file on server:
 -   PostgreSQL
 -   FireBase
 -   Winston logger
+-   Docker
 
 ### Preview
 
